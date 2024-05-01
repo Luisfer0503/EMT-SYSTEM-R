@@ -1,6 +1,8 @@
 package login;
 
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 
@@ -26,8 +28,9 @@ public class login extends JFrame implements ActionListener {
 
             if(user.equals("RH")&& pas.equals("12345")) {
                 JOptionPane.showMessageDialog(null, "ingresaste");
-                //mandar a llamar la funcion para mostrar el menu
-            }else {
+                menu();
+            }
+            else{
                 JOptionPane.showMessageDialog(null, "usuario o contrasennia incorrectos");
             }
         }else if (e.getSource()==cerrarButton){
@@ -35,5 +38,4 @@ public class login extends JFrame implements ActionListener {
         }
 
     }
-
 }

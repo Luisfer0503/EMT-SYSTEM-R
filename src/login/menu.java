@@ -1,6 +1,7 @@
 package login;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,4 +25,14 @@ public class menu extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
     }
+    public void menu(){
+        JFrame fr= new JFrame("menu");
+        Menu m=new Menu();
+        //fr.setContentPane(m.getpanel());
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.setSize(500,450);
+        fr.setLocationRelativeTo(null);
+        fr.setVisible(true);
+    }
+
 }
