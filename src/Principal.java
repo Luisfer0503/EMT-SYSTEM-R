@@ -1,38 +1,21 @@
-import gestor.archivos.*;
-import java.util.Scanner;
+import login.*;
 
+import javax.swing.*;
+import javax.tools.Tool;
+import java.awt.*;
+import java.util.*;
 
-public class Principal {
-    public static void main(String[] args) {
-        // Crear instancia de ArchivoTexto en modo escritura
-        ArchivoTexto file1 = new ArchivoTexto("C:\\Prueba\\Mireya.txt", false);
-
-        // Abrir en modo escritura
-        file1.AbrirModoEscritura();
-
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Escribe un texto: ");
-        String texto = scan.nextLine();
-
-        // Escribir contenido en el archivo (mensaje simulado)
-        file1.Escribir(texto);
-
-        // Cerrar el archivo
-        file1.Cerrar();
-
-        // Crear instancia de ArchivoTexto
-        ArchivoTexto fileLectura = new ArchivoTexto("C:\\Prueba\\Mireya.txt");
-        String leido;
-        // Abrir en modo lectura
-        fileLectura.AbrirModoLectura();
-        texto = fileLectura.Leer();
-        // Leer el contenido (mensaje simulado)
-        while (texto != null){
-            System.out.println(texto);
-            texto = fileLectura.Leer();
-        }
-
-        // Cerrar el fileLectura
-        fileLectura.Cerrar();
+public class Principal{
+    public static void main(String []args){
+        JFrame fr=new JFrame("EMT-SYSTEM");
+        Dimension tam= Toolkit.getDefaultToolkit().getScreenSize();
+        int x=(tam.width/2)-250;
+        int y=(tam.height/2)-200;
+        login lo=new login();
+        fr.setContentPane(lo.getJpanel());
+        fr.setSize(500,450);
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.setLocation(x,y);
+        fr.setVisible(true);
     }
 }
