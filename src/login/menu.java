@@ -1,12 +1,11 @@
 package login;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class menu extends JFrame implements ActionListener {
-    private JPanel panel;
+    private JPanel Jpanel;
     private JButton cerrarSesionButton;
     private JButton datosPersonalesButton;
     private JButton datosEmpresarialesButton;
@@ -18,7 +17,7 @@ public class menu extends JFrame implements ActionListener {
         contratosButton.addActionListener(this);
     }
     public JPanel getmenu(){
-        return panel;
+        return Jpanel;
     }
 
     @Override
@@ -26,11 +25,11 @@ public class menu extends JFrame implements ActionListener {
 
     }
     public void menu(){
-        JFrame fr= new JFrame("menu");
-        Menu m=new Menu();
-        //fr.setContentPane(m.getpanel());
+        JFrame fr=new JFrame("menu");
+        menu m=new menu();
+        fr.setContentPane(m.getmenu());
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.setSize(500,450);
+        fr.setSize(700,650);
         fr.setLocationRelativeTo(null);
         fr.setVisible(true);
     }

@@ -1,5 +1,5 @@
 package login;
-
+import login.menu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,6 +36,15 @@ public class login extends JFrame implements ActionListener {
         }else if (e.getSource()==cerrarButton){
             System.exit(0);
         }
+    }
+    private void menu(){
+        JFrame fr= new JFrame("menu");
+        menu m=new menu();
 
+        fr.setContentPane(m.getmenu());
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.setSize(600,450);
+        fr.setLocationRelativeTo(null);
+        fr.setVisible(true);
     }
 }
