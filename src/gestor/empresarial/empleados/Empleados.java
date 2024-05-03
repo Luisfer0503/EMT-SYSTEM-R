@@ -1,12 +1,18 @@
 package gestor.empresarial.empleados;
 import gestor.empresarial.contrato.*;
+import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.*;
 
 public final class Empleados implements iEmpleados{
     private  int id;
     public GestionErrores error;
+    private DatosEmpresariales datEmp;
+    private Contrato contra;
+    public GestionErrores err;
 
     public Empleados(){
+        id=0;
+
 
     }
 
