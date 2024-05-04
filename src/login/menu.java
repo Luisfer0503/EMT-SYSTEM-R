@@ -1,6 +1,7 @@
 package login;
 
 import javax.swing.*;
+import javax.tools.Tool;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,11 +38,24 @@ public class menu extends JFrame implements ActionListener {
         int x=(tam.width/2)-150;
         int y=(tam.height/2)-100;
 
-        
+
+    }
+    private void datosEmpresariales(){
+        JFrame fr= new JFrame("datos empresariales");
+        Dimension tam= Toolkit.getDefaultToolkit().getScreenSize();
+        int x=(tam.width/2)-150;
+        int y=(tam.height/2)-100;
+        DatosEmpresariales demp=new DatosEmpresariales();
+        fr.setContentPane(demp.getJemp());
+        fr.setSize(700, 600);
+        fr.setLocationRelativeTo(null);
+        fr.setVisible(true);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if(e.getSource()==datosEmpresarialesButton){
+            datosPer();
+        }
     }
 
 }
