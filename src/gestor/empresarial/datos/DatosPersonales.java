@@ -13,6 +13,10 @@ public class DatosPersonales {
         this.correo=correo;
     }
 
+    public DatosPersonales() {
+
+    }
+
     protected int getId() {
         return id;
     }

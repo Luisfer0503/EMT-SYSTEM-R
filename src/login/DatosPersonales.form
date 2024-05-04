@@ -21,7 +21,7 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="28207" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="28207" class="javax.swing.JTextField" binding="idtext">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -37,7 +37,7 @@
           <text value="NombreCompleto"/>
         </properties>
       </component>
-      <component id="e2d44" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="e2d44" class="javax.swing.JTextField" binding="nombretext">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -53,7 +53,7 @@
           <text value="CorreoElectronico"/>
         </properties>
       </component>
-      <component id="9d411" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="9d411" class="javax.swing.JTextField" binding="correotext">
         <constraints>
           <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

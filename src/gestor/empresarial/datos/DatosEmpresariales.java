@@ -6,6 +6,7 @@ public final class DatosEmpresariales extends DatosPersonales{
     private String puesto;
 
     public DatosEmpresariales(int id, String nombre, String apellidos, String correo){
+        super();
 
     }
 

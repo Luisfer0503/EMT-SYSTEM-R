@@ -13,7 +13,7 @@ public class Principal{
         int y=(tam.height/2)-200;
         login lo=new login();
         fr.setContentPane(lo.getJpanel());
-        fr.setSize(500,450); //cdscsd
+        fr.setSize(500,450);
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.setLocation(x,y);
         fr.setVisible(true);

@@ -1,5 +1,5 @@
 package login;
-
+import login.DatosEmpresariales;
 import javax.swing.*;
 import javax.tools.Tool;
 import java.awt.*;
@@ -54,7 +54,10 @@ public class menu extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==datosEmpresarialesButton){
-            datosPer();
+            datosEmpresariales();
+        }
+        if(e.getSource()==cerrarSesionButton){
+            System.exit(0);
         }
     }
 

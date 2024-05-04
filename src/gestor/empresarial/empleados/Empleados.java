@@ -19,11 +19,11 @@ public final class Empleados implements iEmpleados{
         empleados = null;
         datPer = new DatosPersonales[50];
         datEmp=new DatosEmpresariales[50];
-        contra=new Contrato=[50];
+        //contra=new Contrato=[50];
 
     }
 
-1
+
 
 
 
