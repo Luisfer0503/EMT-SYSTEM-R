@@ -2,19 +2,30 @@ package gestor.empresarial.empleados;
 import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.*;
+import login.DatosPersonales;
 
 public final class Empleados implements iEmpleados{
     private  int id;
     public GestionErrores error;
-    private DatosEmpresariales datEmp;
-    private Contrato contra;
+    private DatosEmpresariales datEmp[];
+    private Contrato contra[];
     public GestionErrores err;
 
-    public Empleados(){
-        id=0;
+    private Empleados empleados;
+    private DatosPersonales datPer[];
 
+    public Empleados() {
+        id = 0;
+        empleados = null;
+        datPer = new DatosPersonales[50];
+        datEmp=new DatosEmpresariales[50];
+        contra=new Contrato=?'000000[50];
 
     }
+
+1
+
+
 
     public void addDatosPersonales(String nombre, String Apellidos, String Correo){
 

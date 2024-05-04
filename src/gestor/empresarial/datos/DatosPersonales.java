@@ -1,11 +1,17 @@
 package gestor.empresarial.datos;
 
-public abstract class DatosPersonales {
+public class DatosPersonales {
     private int id;
     private String nombre;
     private String apellidos;
     private String correo;
     private String whatsapp;
+
+    public DatosPersonales(String nombre, String whatsapp, String correo){
+        this.nombre=nombre;
+        this.whatsapp=whatsapp;
+        this.correo=correo;
+    }
 
     protected int getId() {
         return id;
