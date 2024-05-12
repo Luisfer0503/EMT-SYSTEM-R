@@ -4,6 +4,8 @@ import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.*;
 import login.DatosPersonales;
 
+import java.util.List;
+
 public final class Empleados implements iEmpleados{
     private  int id;
     public GestionErrores error;
@@ -15,7 +17,7 @@ public final class Empleados implements iEmpleados{
     private DatosPersonales datPer[];
 
     public Empleados() {
-        id = 0;
+        this.id = 0;
         empleados = null;
         datPer = new DatosPersonales[50];
         datEmp=new DatosEmpresariales[50];
@@ -23,8 +25,8 @@ public final class Empleados implements iEmpleados{
 
     }
 
-
-
+    public Empleados(String id, String nombre, String correo) {
+    }
 
 
     public void addDatosPersonales(String nombre, String Apellidos, String Correo){
@@ -72,5 +74,12 @@ public final class Empleados implements iEmpleados{
     }
     public void setCargo(Cargos cargo){
 
+    }
+
+    public void addEmpleado(Empleados empleado) {
+    }
+
+    public List<Empleados> getListaEmpleados() {
+        return getListaEmpleados();
     }
 }
