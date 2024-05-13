@@ -1,6 +1,7 @@
 package login;
 import login.DatosEmpresariales;
 import javax.swing.*;
+import javax.swing.plaf.PanelUI;
 import javax.tools.Tool;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,49 +13,34 @@ public class menu extends JFrame implements ActionListener {
     private JButton datosPersonalesButton;
     private JButton datosEmpresarialesButton;
     private JButton contratosButton;
-    menu(){
+
+    public menu(){
         cerrarSesionButton.addActionListener(this);
         datosPersonalesButton.addActionListener(this);
         datosEmpresarialesButton.addActionListener(this);
         contratosButton.addActionListener(this);
+        setTitle("Menu");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.getContentPane().add(Jpanel);
+        this.setSize(700, 550);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
     public JPanel getmenu(){
         return Jpanel;
     }
 
-    public void menu(){
-        JFrame fr=new JFrame("menu");
-        menu m=new menu();
-        fr.setContentPane(m.getmenu());
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.setSize(700,650);
-        fr.setLocationRelativeTo(null);
-        fr.setVisible(true);
-    }
 
-    private void datosPer(){
-        JFrame per=new JFrame("datos personales");
-        Dimension tam= Toolkit.getDefaultToolkit().getScreenSize();
-        int x=(tam.width/2)-150;
-        int y=(tam.height/2)-100;
-
-
-    }
-    private void datosEmpresariales(){
-        JFrame fr= new JFrame("datos empresariales");
-        Dimension tam= Toolkit.getDefaultToolkit().getScreenSize();
-        int x=(tam.width/2)-150;
-        int y=(tam.height/2)-100;
-        DatosEmpresariales demp=new DatosEmpresariales();
-        fr.setContentPane(demp.getJemp());
-        fr.setSize(700, 600);
-        fr.setLocationRelativeTo(null);
-        fr.setVisible(true);
-    }
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == datosPersonalesButton){
+            DatosPersonales datosPersonales=new DatosPersonales();
+            dispose();
+        }
+
         if(e.getSource()==datosEmpresarialesButton){
-            datosEmpresariales();
+            //datosEmpresariales();
+
         }
         if(e.getSource()==cerrarSesionButton){
             System.exit(0);

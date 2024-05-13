@@ -24,6 +24,13 @@ public class DatosPersonales extends JFrame implements ActionListener {
        agregarButton.addActionListener(this);
        cerrarButton.addActionListener(this);
        Empleados emp=new Empleados();
+       this.setTitle("Datos Personales");
+       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.setContentPane(Jpersonales);
+       this.setSize(800, 700);
+       this.setLocationRelativeTo(null);
+       this.setVisible(true);
+
    }
 
 

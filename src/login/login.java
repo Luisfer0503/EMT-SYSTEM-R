@@ -16,7 +16,16 @@ public class login extends JFrame implements ActionListener {
     public login(){
         ingresarButton.addActionListener(this);
         cerrarButton.addActionListener(this);
+        this.setTitle("Login");
+        this.setContentPane(Panel);
+        this.setSize(500, 450);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+
+
     public JPanel getJpanel(){
         return Panel;
     }
@@ -28,7 +37,8 @@ public class login extends JFrame implements ActionListener {
 
             if(user.equals("RH")&& pas.equals("12345")) {
                 JOptionPane.showMessageDialog(null, "ingresaste");
-                menu();
+                menu menu = new menu();
+                dispose();
             }
             else{
                 JOptionPane.showMessageDialog(null, "usuario o contrasennia incorrectos");
