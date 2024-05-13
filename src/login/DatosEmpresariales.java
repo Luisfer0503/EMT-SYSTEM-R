@@ -4,6 +4,7 @@ import gestor.empresarial.empleados.Empleados;
 import gestor.errores.GestionErrores;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -50,6 +51,10 @@ public class DatosEmpresariales extends JFrame implements ActionListener {
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        this.setContentPane(Jemp);
+        this.setSize(800, 700);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
 
         // Agregamos action listeners a los botones
         addbutton.addActionListener(this);
@@ -63,6 +68,7 @@ public class DatosEmpresariales extends JFrame implements ActionListener {
             String id = idtext.getText();
             String nombre = nombretext.getText();
             String correo = correotext.getText();
+
 
             // Verificar que los campos no estén vacíos
             if (id.isEmpty() || nombre.isEmpty() || correo.isEmpty()) {
@@ -83,7 +89,8 @@ public class DatosEmpresariales extends JFrame implements ActionListener {
 
         } else if (e.getSource() == cerrarButton) {
             // Cerrar la aplicación
-            System.exit(0);
+            menu menu= new menu();
+            dispose();
         }
     }
 }

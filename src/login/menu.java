@@ -40,8 +40,14 @@ public class menu extends JFrame implements ActionListener {
 
         if(e.getSource()==datosEmpresarialesButton){
             //datosEmpresariales();
+            DatosEmpresariales datosEmpresariales=new DatosEmpresariales();
+            dispose();
+        }
+
+        if(e.getSource()==contratosButton){
 
         }
+
         if(e.getSource()==cerrarSesionButton){
             System.exit(0);
         }

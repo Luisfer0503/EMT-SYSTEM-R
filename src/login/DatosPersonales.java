@@ -37,9 +37,8 @@ public class DatosPersonales extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==cerrarButton){
-            menu m=new menu();
-            m.setVisible(true);
-            this.dispose();
+            menu menu= new menu();
+            dispose();
         }
         if(e.getSource().equals(agregarButton)) {
             if (nombretext.getText().isEmpty() && idtext.getText().isEmpty() && correotext.getText().isEmpty()) {
