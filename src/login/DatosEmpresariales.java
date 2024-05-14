@@ -77,7 +77,7 @@ public class DatosEmpresariales extends JFrame implements ActionListener {
             }
 
             // Agregar empleado con los valores ingresados
-            empleados.addEmpleado(new Empleados(id, nombre, correo));
+            //empleados.addEmpleado(new Empleados());
 
             // Lógica para mostrar la lista de empleados
             List<Empleados> listaEmpleados = empleados.getListaEmpleados();

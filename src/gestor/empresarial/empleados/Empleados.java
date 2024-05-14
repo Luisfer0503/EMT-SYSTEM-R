@@ -13,7 +13,8 @@ public final class Empleados implements iEmpleados{
     private DatosEmpresariales datEmp[];
     private Contrato contra[];
     public GestionErrores err;
-
+    private int i;
+    private int j;
     private Empleados empleados;
     private DatosPersonales datPer[];
 
@@ -22,19 +23,37 @@ public final class Empleados implements iEmpleados{
         empleados = null;
         datPer = new DatosPersonales[50];
         datEmp=new DatosEmpresariales[50];
-        //contra=new Contrato=[50];
-
+        contra=new Contrato[50];
+        i = 0;
+        j = 0;
     }
 
-    public Empleados(String id, String nombre, String correo) {
+    public Empleados(String nombre, String apellidos, String correo) {
+
     }
 
 
     public void addDatosPersonales(String nombre, String Apellidos, String Correo){
-
+        if(i<100)
+        {
+            datEmp[i] = new DatosEmpresariales(i, nombre, Apellidos, Correo);
+            i++;
+        }
+        else{
+            System.out.println("Ya no esta disponible");
+        }
     }
-    public void addContato(int id, int antiguedad, String puesto, Cargos cargo){
-
+    public void addContato(int id, int annio){
+        if (i < 100) {
+            int i=findEmpleado(id);
+            if (i>-1) {
+                contra[j] = new Contrato(i);
+                this.j++;
+            }
+        }
+        else {
+            System.out.println("Ya no hay vacantes");
+        }
     }
 
     private int findEmpleado(int id){

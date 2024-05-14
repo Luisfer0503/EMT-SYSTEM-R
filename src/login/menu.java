@@ -45,7 +45,8 @@ public class menu extends JFrame implements ActionListener {
         }
 
         if(e.getSource()==contratosButton){
-
+            Contratos C = new Contratos();
+            dispose();
         }
 
         if(e.getSource()==cerrarSesionButton){
